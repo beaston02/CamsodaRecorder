@@ -1,6 +1,6 @@
 # CamsodaRecorder
 
-Automatically checks every 30 seconds to see which camsoda models are online and records any models which are in the "wanted" list when they are either in public shows, or private (spy, not ticket) shows. 
+Automatically checks every 30 seconds to see which camsoda models are online and records any models which are in the "wanted" list when they are either in public shows, or private (spy, not ticket) shows. To auto record a model, add their username as found in the URL link to their chatroom (https://www.camsoda.com/{username}) to the "wanted" file.
 
 I have only tested on debian(7+8), and Mac (10.10.4), although it should run on other opporating systems also.
 

@@ -16,6 +16,7 @@ def getOnlineModels():
             models = line.split()
             for theModel in models:
                 wanted.append(theModel.lower())
+    f.close()
     url = "https://www.camsoda.com/api/v1/browse/online"
     with urllib.request.urlopen(url) as url:
         data = json.loads(url.read().decode())
@@ -59,6 +60,7 @@ def startRecording(modelData, num):
                     except:
                         recording.remove(modelData['username'].lower())
                         #print("{} stream has ended".format(modelData['username']))
+                        f.close()
                         return()
         recording.remove(modelData['username'].lower())
         #print("{} stream has ended".format(modelData['username']))

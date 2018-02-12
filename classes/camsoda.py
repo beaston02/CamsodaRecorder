@@ -178,10 +178,6 @@ class should_record_model():
         self._settings = settings
     def check(self, model):
         if model['username'] in Wanted(self._settings).wanted_models:
-            try:
-                if model['status'] == 'private' or model['status'] == 'limited':
-                    return False
-            except KeyError:
+            if not hasattr(model,'status') or model['status'] == 'online':
                 return True
-
         return False
